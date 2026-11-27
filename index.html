@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Amity University – Lab Work 4</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <img src="images/amity-logo.png" alt="Amity University logo" class="logo">
+      <span class="brand-text">
+        <strong>Amity University</strong>
+        <span>Web Technologies Lab · Lab Work 4</span>
+      </span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html" class="active" aria-current="page">Home</a>
+      <a href="form.html">Form</a>
+      <a href="table.html">Table</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="hero">
+    <p class="eyebrow">Lab Work 4</p>
+    <h1>3-Page Website with Frame, Form and Table</h1>
+    <p>
+      A student registration project built with HTML, CSS, JavaScript and a PHP backend.
+      Data is validated by PHP and stored in a JSON file.
+    </p>
+    <div class="hero-actions">
+      <a href="form.html" class="btn btn-gold">Open Registration Form</a>
+      <a href="table.html" class="btn btn-ghost-light">View Student Table</a>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Page 1: Home – Using a Frame (iframe)</h2>
+    <p>
+      The <code>&lt;iframe&gt;</code> tag displays another web page inside the current page.
+      The box below is a separate file, <code>about.html</code>, loaded into this page with
+      <code>&lt;iframe src="about.html"&gt;</code>.
+    </p>
+
+    <div class="frame-wrap">
+      <div class="frame-bar" aria-hidden="true">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        <span class="frame-url">about.html</span>
+      </div>
+      <iframe src="about.html" title="About this lab (about.html)" class="frame"></iframe>
+    </div>
+  </section>
+
+  <div class="grid-2">
+    <section class="card">
+      <h2>Project Structure</h2>
+      <p>The project is split into a <strong>frontend</strong> and a <strong>backend</strong>.</p>
+      <ul class="plain-list">
+        <li><strong>Frontend</strong> (HTML, CSS, JavaScript) – what the user sees: this page, the form and the table.</li>
+        <li><strong>Backend</strong> (PHP) – runs on the server: validates and saves the form data, and sends it back to the table as JSON.</li>
+      </ul>
+<pre class="tree" aria-label="Folder structure">lab4/
+├── frontend/   HTML, CSS, JS
+└── backend/    PHP + data/students.json</pre>
+    </section>
+
+    <section class="card">
+      <h2>Backend Status</h2>
+      <p>JavaScript calls <code>get_students.php</code> to check that the PHP server is running.</p>
+      <div class="status" id="server-status" data-state="checking" role="status" aria-live="polite">
+        <span class="status-dot"></span>
+        <span id="status-text">Checking backend…</span>
+      </div>
+      <button type="button" class="btn btn-secondary" id="recheck">Check again</button>
+    </section>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Amity University · Lab Work 4 · HTML, CSS, JavaScript &amp; PHP</p>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
